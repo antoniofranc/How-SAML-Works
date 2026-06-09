@@ -1,4 +1,5 @@
 # How SAML Works
+📄 [View Full Document on Google Docs](https://docs.google.com/document/d/1mmL_zRuJJWe_-Sf7q0hKKJqaGe2AOlKX/)
  
 **Architecture Diagram, Flow Walkthrough & Troubleshooting Guide**  
 Final IAM Project — Day 3 Portfolio Artifact
