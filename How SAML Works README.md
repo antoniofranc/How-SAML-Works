@@ -281,23 +281,7 @@ SAML and OpenID Connect (OIDC) are both SSO protocols. In modern IAM you need to
 | **Provisioning** | No built-in provisioning | Pairs with SCIM for user provisioning |
 | **Microsoft Entra default** | Used for legacy apps or when the SP only supports SAML | Preferred for new enterprise app integrations when available |
  
----
- 
-## 8. Interview-Ready Explanation
- 
-If asked **"How does SAML work?"** in an interview, here is a concise, structured answer:
- 
----
- 
-> **On the flow:**
-> "SAML is a browser-based SSO protocol with three actors: the Identity Provider, the Service Provider, and the user's browser. When a user tries to access an application, the SP redirects them to the IdP with an `AuthnRequest`. The IdP authenticates the user and issues a signed XML assertion — a document that says 'this user is alice@contoso.com, she belongs to the Sales group, and I, the trusted IdP, vouch for her.' The browser carries this assertion back to the SP as an HTTP POST. The SP verifies the digital signature using the IdP's public key, checks the assertion hasn't expired, confirms it was intended for this specific SP, and if everything checks out, grants access and creates a local session."
- 
-> **On security:**
-> "The key security mechanism is the digital signature. The SP never needs to call the IdP to verify the assertion in real time — the signature is proof enough. This makes SAML stateless and scalable. The user's password never leaves the IdP. The SP only ever sees the assertion."
- 
-> **On what breaks it:**
-> "Common things that break SAML: expired or rotated signing certificates, entity ID mismatches, clock skew causing assertion expiry, and users not assigned to the application in the IdP."
- 
+
 ---
  
 *Document prepared as a portfolio artifact for the Final IAM Project — Day 3.*
